@@ -59,7 +59,7 @@ const getLinkToken = async (req, res) => {
         const { userId } = req.body;
 
         const response = await axios.post(
-            `${PINWHEEL_API_BASE_URL}/link_tokens`,
+            `${PINWHEEL_API_BASE_URL}/v1/link_tokens`,
             { user_id: userId },
             {
                 headers: {
