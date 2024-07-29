@@ -1,7 +1,6 @@
 const { verifyIncome } = require("../utils/pinWheel.helper");
 
 const verificationPinWheel = async (req, res) => {
-    // res.end("hello from verificationPinWheel")
     try {
         const { userId } = req.body;
         const incomeData = await verifyIncome(userId);
