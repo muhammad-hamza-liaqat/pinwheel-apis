@@ -1,6 +1,6 @@
 const { verifyIncome } = require("../utils/pinWheel.helper");
 
-const verificationPinWheel = async (req, res) => {
+const verificationPinWheelIncome = async (req, res) => {
     try {
         const { userId } = req.body;
         const incomeData = await verifyIncome(userId);
@@ -14,5 +14,5 @@ const verificationPinWheel = async (req, res) => {
 }
 
 module.exports = {
-    verificationPinWheel
+    verificationPinWheelIncome
 }

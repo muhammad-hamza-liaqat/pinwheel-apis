@@ -1,7 +1,7 @@
 const express = require("express");
-const { verificationPinWheel } = require("../controller/pinWheel.controller");
+const { verificationPinWheelIncome } = require("../controller/pinWheel.controller");
 const pinWheelRoutes = express.Router();
 
-pinWheelRoutes.post("/verification", verificationPinWheel);
+pinWheelRoutes.post("/verification", verificationPinWheelIncome);
 
 module.exports = pinWheelRoutes
