@@ -2,7 +2,6 @@ const axios = require('axios');
 require("dotenv").config();
 
 const PINWHEEL_API_BASE_URL = process.env.PINWHEEL_API_BASE_URL;
-console.log("PINWHEEL_API_BASE_URL ------------------------------>",PINWHEEL_API_BASE_URL);
 const PINWHEEL_API_KEY = process.env.PIN_WHEEL_API_KEY;
 
 const verifyIncome = async (userId) => {
@@ -17,7 +16,7 @@ const verifyIncome = async (userId) => {
     });
     return response.data;
   } catch (error) {
-    console.log("an error occured at: verifyIncome helper function: ", error)
+    console.log("an error occured at: verifyIncome helper function: ", error.response , error.response.data , error.message)
     throw new Error(error.response ? error.response.data : error.message);
   }
 };
